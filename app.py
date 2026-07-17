@@ -19,7 +19,14 @@ db = mysql.connector.connect(
 
 cursor = db.cursor()
 
+@app.route('/ask', methods=['POST'])
+def ask():
 
+    question = request.form['question']
+
+    response = model.generate_content(question)
+
+    return {"answer": response.text}
 @app.route('/')
 def home():
     return render_template('index.html')
