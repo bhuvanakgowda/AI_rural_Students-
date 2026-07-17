@@ -46,3 +46,36 @@ ${data.answer}
 document.getElementById("question").value="";
 
 }
+async function loadQuiz(){
+
+let res=await fetch("/quizdata");
+
+let data=await res.json();
+
+let html="";
+
+data.questions.forEach((q,i)=>{
+
+html+=`<h3>${i+1}. ${q.question}</h3>`;
+
+q.options.forEach(option=>{
+
+html+=`
+
+<input type="radio"
+
+name="q${i}">
+
+${option}
+
+<br>
+
+`;
+
+});
+
+});
+
+document.getElementById("quiz").innerHTML=html;
+
+}
