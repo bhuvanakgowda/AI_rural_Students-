@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+
+<body>
+
+<nav>
+
+<h2>EduAssist AI</h2>
+
+<div>
+
+<a href="/chat">AI Chat</a>
+
+<a href="/quiz">Quiz</a>
+
+<a href="/logout">Logout</a>
+
+</div>
+
+</nav>
+
+<div class="dashboard">
+
+<h1>Welcome {{name}}</h1>
+
+<p>
+Start learning with AI and improve your knowledge.
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>🤖 AI Chat</h2>
+
+<p>Ask your doubts instantly.</p>
+
+<a href="/chat" class="btn">Open</a>
+
+</div>
+
+<div class="card">
+
+<h2>📝 Quiz</h2>
+
+<p>Test your knowledge.</p>
+
+<a href="/quiz" class="btn">Start Quiz</a>
+
+</div>
+
+<div class="card">
+
+<h2>📚 Courses</h2>
+
+<p>Learn Python, Java, C++, DBMS and more.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
