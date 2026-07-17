@@ -1,3 +1,9 @@
+import google.generativeai as genai
+import os
+
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
+
+model = genai.GenerativeModel("gemini-1.5-flash")
 from flask import Flask, render_template, request, redirect, url_for, session
 import mysql.connector
 
