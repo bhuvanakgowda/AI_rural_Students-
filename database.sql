@@ -24,3 +24,16 @@ quiz_score INT,
 completed_date DATE
 
 );
+CREATE TABLE quiz_scores(
+id INT AUTO_INCREMENT PRIMARY KEY,
+user_id INT,
+score INT,
+quiz_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE feedback(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100),
+email VARCHAR(100),
+message TEXT
+);
