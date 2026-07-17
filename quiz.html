@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Quiz</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>EduAssist AI</h2>
+
+<div>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/chat">AI Chat</a>
+
+</div>
+
+</nav>
+
+<div class="quiz-container">
+
+<h1>Quick Quiz</h1>
+
+<form>
+
+<h3>
+
+1. Python is a ______ language?
+
+</h3>
+
+<input
+type="radio"
+name="q1">
+
+Programming
+
+<br><br>
+
+<input
+type="radio"
+name="q1">
+
+Database
+
+<br><br>
+
+<input
+type="radio"
+name="q1">
+
+Operating System
+
+<br><br>
+
+<button>
+
+Submit
+
+</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
